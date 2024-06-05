@@ -1,8 +1,7 @@
-// AddNoteForm.js
 import React, { useState } from 'react';
 import { TextField, Button, Container, Grid } from '@mui/material';
 
-const AddNoteForm = ({ onAdd }) => {
+const AddNoteForm = ({ onAdd, darkTheme }) => {
   const [inputValue, setInputValue] = useState('');
 
   const handleChange = (e) => {
@@ -27,6 +26,9 @@ const AddNoteForm = ({ onAdd }) => {
               variant="outlined"
               value={inputValue}
               onChange={handleChange}
+              InputProps={{ style: { color: darkTheme ? '#BB86FC' : '#000000' } }}
+              InputLabelProps={{ style: { color: darkTheme ? '#BB86FC' : '#000000' } }}
+              style={{ backgroundColor: darkTheme ? '#BB86FC' : '#ffffff' }}
             />
           </Grid>
           <Grid item xs={12} md={6}>
