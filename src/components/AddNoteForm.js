@@ -26,13 +26,24 @@ const AddNoteForm = ({ onAdd, darkTheme }) => {
               variant="outlined"
               value={inputValue}
               onChange={handleChange}
-              InputProps={{ style: { color: darkTheme ? '#BB86FC' : '#000000' } }}
-              InputLabelProps={{ style: { color: darkTheme ? '#BB86FC' : '#000000' } }}
+              InputProps={{ style: { color: darkTheme ? '#fffff' : '#000000' } }}
+              InputLabelProps={{ style: { color: darkTheme ? '#fffff' : '#000000' } }}
               style={{ backgroundColor: darkTheme ? '#BB86FC' : '#ffffff' }}
             />
           </Grid>
           <Grid item xs={12} md={6}>
-            <Button fullWidth variant="contained" color="primary" type="submit">
+            <Button
+              fullWidth
+              variant="contained"
+              color="primary"
+              type="submit"
+              sx={{
+                '&:hover': {
+                  backgroundColor: darkTheme ? '#BB86FC' : 'black',
+                  color: darkTheme ? 'black' : '#ffffff'
+                }
+              }}
+            >
               Ajouter
             </Button>
           </Grid>

@@ -30,7 +30,7 @@ const App = () => {
             {darkTheme ? <i className="fas fa-sun"></i> : <i className="fas fa-moon"></i>}
           </button>
           <h1>App note</h1>
-          <AddNoteForm onAdd={handleAddNote} />
+          <AddNoteForm onAdd={handleAddNote} darkTheme={darkTheme}/>
           <NoteList notes={notes} onDelete={handleDeleteNote} />
         </div>
       </Grid>
